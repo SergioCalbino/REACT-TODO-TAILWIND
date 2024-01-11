@@ -7,24 +7,22 @@ const TodoCreate = ({ createTodo }) => {
     const handleSubmitAddTodo = (e) => {
         e.preventDefault();
         if (!title.trim()) {
-            return setTitle('');
+            return setTitle("");
         } else {
             // Create a new todo with the entered title and add it to our list of todos
-            createTodo(title)
+            createTodo(title);
             setTitle("");
-
         }
-        
     };
 
     return (
         <form
             onSubmit={handleSubmitAddTodo}
-            className="flex gap-4 items-center bg-white rounded-md overflow-hidden py-4 px-4"
+            className="flex gap-4 items-center bg-white rounded-md overflow-hidden py-4 px-4 dark:bg-gray-800"
         >
             <span className="h-5 w-5 rounded-full border-2 inline-block"></span>
             <input
-                className="w-full text-gray-400 outline-none"
+                className="w-full text-gray-400 outline-none dark:bg-gray-800"
                 type="text"
                 placeholder="Create a new todo..."
                 value={title}
