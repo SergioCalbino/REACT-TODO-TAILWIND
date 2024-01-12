@@ -1,7 +1,6 @@
 import TodoItem from "./TodoItem";
 
 const TodoList = ({ todos, removeTodo, updateTodo }) => {
-    console.log(todos);
     return (
         <div className=" mt-8 bg-white rounded-t-md">
             {todos.map((todo) => (
